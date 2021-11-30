@@ -1,0 +1,226 @@
+
+body{
+  margin: 0;
+}
+
+.App{
+  height: 100vh;
+  width: 100vw;
+  display: flex; 
+  flex-flow: column nowrap; 
+}
+
+.top
+{
+  width: 80%;
+  margin: 5px auto;
+  z-index: 2;
+}
+
+.titlebar
+{
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+.searchBar
+{
+  margin: 10px;
+  position: fixed;
+}
+
+label
+{
+  background-color: white;
+}
+
+.player
+{
+  background-color: #ffffff;
+}
+
+.react-pdf__Page
+{
+  overflow: hidden;
+  width: 44vw;
+  display: -webkit-inline-flex;
+  margin: 0.5vw;
+}
+
+
+.rightPageClass{
+
+}
+
+.react-pdf__Page.pdf-page {
+  display: flex;
+  justify-content: center; 
+}
+.react-pdf__Document{
+  padding-top: 0;
+  overflow: auto;
+  margin-left: 4vw;
+  flex: 1; 
+}
+.react-pdf__Page__canvas
+{
+  z-index: 0;
+}
+.react-pdf__Page__textContent {
+  margin-top: -0.05em;
+  margin-left: 0.1em;
+}
+
+.rightArrow {
+  transform: rotate(180deg)
+}
+
+svg {
+  color: #999999;
+}
+
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rhap_progress-section
+{
+  display: none;
+}
+
+.rhap_stacked .rhap_controls-section
+{
+  margin-top: 0;
+}
+.rhap_container.audio-player{
+  padding: 0 15px;
+}
+.rhap_main-controls {
+  flex: auto;
+  justify-content: start;
+}
+
+/*#playback_speed {
+  position: "absolute";
+  margin-top: ".5em";
+  margin-left: "-1.5em";
+}
+
+#navigator {
+  margin-top: ".5em";
+}
+*/
+
+#page_left {
+  position: absolute;
+  left: 0;
+}
+
+#previousPage {
+  left: 0;  
+}
+
+#nextPage{
+  right: 0;  
+}
+
+.navigationButtons {
+  top: 0;
+  margin: 0 12px;
+}
+
+#goBackBtn {
+  top: 15vh;
+  padding: 10px 10px 10px 3vw;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #eeec;
+}
+
+.buttons {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+
+}
+
+.buttons:hover {
+  background-color: #05050520;
+}
+
+.buttons:active {
+  background-color: #cccccc66;
+}
+
+#prevPageBtn {
+  transform: rotate(180deg);
+}
+
+#nextPageBtn {
+}
+
+.navigationButtonsSvg {
+  font-size: 3.3em;
+}
+
+.rhap_additional-controls{
+  justify-content: flex-start;
+}
+
+.goBackText {
+  color: #222;
+  font-weight: bold;
+
+}
+
+
+@media only screen and (max-width: 600px) {
+  .react-pdf__Page
+  {
+    overflow: hidden;
+    width: 100vw;
+    display: flex;
+    justify-content: center; 
+  }
+  .top {
+    width: 100%;
+  }
+
+  .navigationButtonsSvg {
+    font-size: 2em;
+  }
+  .navigationButtons {
+    top: 3.0em;
+    z-index: 10;
+    height: 2em;
+    margin: 0 2px;
+  }
+  .rhap_additional-controls{
+    flex-direction: column;
+  }
+
+  .buttons:hover {
+    background-color: transparent;
+  }
+  .buttons:hover svg path{
+    color: #bbbbbb;
+  }
+
+  .react-pdf__Page__textContent {
+    margin-left: 0.0em;
+  }
+}
+
+#goBackBtn:hover {
+  background-color: #ddd;
+}
+#goBackBtn:hover svg path{
+  /* color: maroon; */
+}
+#goBackBtn:active {
+  background-color: #ccc;
+}
